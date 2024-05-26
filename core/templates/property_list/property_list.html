@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listings</title>
+</head>
+<body>
+    <h2>Property Listings</h2>
+    {% for property in properties %}
+        <div>
+            <h3>{{ property.title }}</h3>
+            <p>Description: {{ property.description }}</p>
+            <!-- Add other property details here -->
+            <a href="{% url 'property_detail' property.pk %}">View Details</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
