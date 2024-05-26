@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Detail</title>
+</head>
+<body>
+    <h2>Property Detail</h2>
+    <h3>{{ property.title }}</h3>
+    <p>Description: {{ property.description }}</p>
+    <!-- Add other property details here -->
+    <p>Seller: {{ property.seller }}</p>
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

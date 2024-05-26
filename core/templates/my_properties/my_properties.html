@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Properties</title>
+</head>
+<body>
+    <h2>My Properties</h2>
+    {% for property in properties %}
+        <div>
+            <h3>{{ property.title }}</h3>
+            <p>Description: {{ property.description }}</p>
+            <!-- Add other property details here -->
+            <a href="{% url 'update_property' property.pk %}">Update</a>
+            <a href="{% url 'delete_property' property.pk %}">Delete</a>
+        </div>
+    {% endfor %}
+</body>
+</html>
